@@ -1,0 +1,15 @@
+vector<int> compareTriplets(vector<int> a, vector<int> b) {
+    vector<int> score;
+    int sumA=0,sumB=0;
+    
+    if(a.size()==b.size()){
+        for(int i=0;i<a.size() && i<b.size();i++){
+            
+            if(a[i]>b[i]) sumA+=1;
+            if(a[i]<b[i]) sumB+=1;
+        }
+        score.push_back(sumA);
+        score.push_back(sumB);
+    }
+    return score;
+}
