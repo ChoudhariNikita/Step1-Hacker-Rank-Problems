@@ -1,0 +1,13 @@
+string timeConversion(string s) {
+    int hour = stoi(s.substr(0, 2)); // string to int using stoi()
+    if(s.at(8)=='P' && hour<12) hour+=12;
+    if(s.at(8)=='A' && hour==12) hour=00;
+
+    // if hour<10, then returns “0” else empty string.    
+    // Purpose is to add a leading zero to the hour value if it is
+    // less than 10. This is done to ensure that the hour value is
+    // always two digits long.     
+    
+    string timeForm24 =(hour<10 ? "0" : "")+ to_string(hour) + s.substr(2,6);
+    return timeForm24;
+}
