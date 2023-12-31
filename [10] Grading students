@@ -1,0 +1,17 @@
+vector<int> gradingStudents(vector<int> grades) {
+    vector<int> final;
+    int remain=0;
+    
+    for(int i=0;i<grades.size();i++){
+        if(grades[i]>=38){
+            remain=5-(grades[i]+5)%5;
+            
+            if(remain<3) grades[i]+=remain;                
+            final.push_back(grades[i]); 
+        }
+        else{
+            final.push_back(grades[i]);
+        } 
+    }
+    return final; 
+}
