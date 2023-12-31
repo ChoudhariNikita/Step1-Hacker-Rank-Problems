@@ -1,0 +1,13 @@
+void plusMinus(vector<int> arr) {
+    int pos=0,neg=0,zero=0;
+    int total=arr.size();
+    for(int i=0;i<total;i++){
+        if(arr[i]>0) pos++;
+        else if(arr[i]<0) neg++;
+        else zero++;
+    }
+    cout<<fixed << setprecision(6)<<(float)pos/total<<endl;
+    cout<<fixed << setprecision(6)<<(float)neg/total<<endl;
+    cout<<fixed << setprecision(6)<<(float)zero/total<<endl;
+}
+
